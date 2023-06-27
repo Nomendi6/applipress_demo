@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  #
+  # Please, first run the setup script to initialize the environment variables
+  #
+
+  applipress:    
+    image: nomendi6/applipress_demo:latest
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m # Java memory configuration options
+      - LOGGING_LEVEL_COM_NOMENDI6_APPLIPRESS=DEBUG # Log level for the Applipress application
+      - APPLIPRESS_CONFIG_HOME=/config     # Directory path where Applipress configurations are mapped
+      - TRANSLATIONS_HOME=/.auto-translate # Directory path where translation configurations are mapped
+      - APPLIPRESS_INSIGHT=yes             # Enables the sending of anonymous usage statistics
+      - APPLIPRESS_USERNAME=${APPLIPRESS_USERNAME}   # Username for Applipress
+      - APPLIPRESS_GROUPNAME=${APPLIPRESS_GROUPNAME} # Group name for Applipress
+      - APPLIPRESS_USER_UID=${APPLIPRESS_USER_UID}   # User UID for Applipress
+      - APPLIPRESS_USER_GID=${APPLIPRESS_USER_GID}   # User GID for Applipress
+    ports:
+      - 127.0.0.1:18080:8080 # Maps the application's port 8080 to the host's port 18080
+    volumes:
+      - ./config/applipress:/config                 # Maps the local Applipress configuration directory to the Docker container's /config directory
+      - ./config/auto-translate:/.auto-translate    # Maps the local translation configuration directory to the Docker container's /.auto-translate directory (optional, Google or Azure API keys can be defined here)
+      - ./projects:/projects                        # Maps the local projects directory to the Docker container's /projects directory - this path can be changed to a different local directory as needed
+    networks:
+      - applipress_default
+
+# Adds a default network
+networks:
+  applipress_default:
+    driver: bridge
