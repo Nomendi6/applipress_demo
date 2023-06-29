@@ -32,4 +32,4 @@ You can alter the container settings in the **docker-compose.yml** file. This in
 
 ### Enabling automatic translation for generated forms
 
-If you want your forms to be automatically translated into other languages, you'll need to configure automatic translation. Enter your Google translation API key into **googleTranslateKey** or your Azure translation key into **azureTranslateKey** in the **config/auto-translate/.auto-translate-config** file. Then, set **automaticTranslation** to **true** and **translationProvider** to either **google** or **azure**. Please refrain from modifying the **config/applipress/config.json** file.
+If you want your forms to be automatically translated into other languages, you'll need to configure automatic translation. Enter your Google translation API key into **googleTranslateKey** or your Azure translation key into **azureTranslateKey** in the **config/auto-translate/.auto-translate-config** file. Then, set **automaticTranslation** to **true** and **translationProvider** to either **google** or **azure**. 
