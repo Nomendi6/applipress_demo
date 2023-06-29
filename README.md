@@ -2,30 +2,34 @@
 
 Applipress is an innovative code generator designed to accelerate the development of business applications. It seamlessly integrates three major components:
 
-- **Applipress Designer**: A user-friendly GUI that allows you to define models that serve as the foundation for your application creation process.
-- **JHipster**: A versatile open-source code generator that uses predefined templates to automate and simplify your coding tasks.
-- **Spiral 5**: A JHipster blueprint that provides an extensive set of templates to further streamline your code generation process.
+- **Applipress Designer**: A user-friendly GUI that allows you to define models, serving as the foundation for your application creation process.
+- **JHipster**: A versatile open-source code generator that leverages predefined templates to automate and simplify your coding tasks.
+- **Spiral 5**: A JHipster blueprint providing an extensive set of templates to further streamline your code generation process.
 
-While JHipster facilitates the creation of various backend and frontend applications, Applipress focuses on generating high-performance Spring Boot backends and robust Angular frontends, customized to meet your specific business requirements.
+While JHipster enables the creation of various backend and frontend applications, Applipress specializes in generating high-performance Spring Boot backends and robust Angular frontends, tailored to meet your specific business needs.
 
-To showcase the capabilities of Applipress, we've encapsulated the Applipress Demo inside a Docker container. This enables you to quickly deploy and test Applipress in a controlled environment, allowing you to experience firsthand the efficiency and power it brings to your application development process.
+We've encapsulated the Applipress Demo inside a Docker container to showcase its capabilities. This allows for quick deployment and testing of Applipress in a controlled environment, letting you experience firsthand the power and efficiency it brings to your application development process.
 
 ## Installation
 
 1. Clone the repository.
 
-2. Run `docker compose up -d` in the terminal. This command starts the Docker container.
+2. Run the setup command in your terminal:
+   - For Linux and macOS: `./setup.sh`
+   - For Windows: `.\setup.ps1`
 
-3. After the container is up and running, you can access the Applipress Demo at http://localhost:18080.
+3. In the same terminal session, start the Docker container by running `docker compose up -d`.
 
-4. To stop the container, run `docker compose down`.
+4. Once the container is up and running, you can access the Applipress Demo at http://localhost:18080.
+
+5. To stop the container, run `docker compose down`.
 
 ## Additional Configuration
 
-### Changing the applipress projects folder to map to your local projects folder
+### Mapping the applipress projects folder to your local projects folder
 
-You can configure the container settings in the **docker-compose.yml** file. This includes the option to change the mapping of the **projects** folder to point to your local **projects** folder. For example: `- /home/your_username/projects:/projects`.
+You can alter the container settings in the **docker-compose.yml** file. This includes the option to map the **projects** folder to your local **projects** folder. For example: `- /home/your_username/projects:/projects`.
 
-### Automatic translation of generated forms
+### Enabling automatic translation for generated forms
 
-If you want your forms to be automatically translated into other languages, you need to configure automatic translation. Enter your Google translation API key into **googleTranslateKey** or Azure translation key into **azureTranslateKey** in the **config/auto-translate/.auto-translate-config** file. Additionally, set **automaticTranslation** to **true** and **translationProvider** to either **google** or **azure**. Please avoid modifying the **config/applipress/config.json** file.
+If you want your forms to be automatically translated into other languages, you'll need to configure automatic translation. Enter your Google translation API key into **googleTranslateKey** or your Azure translation key into **azureTranslateKey** in the **config/auto-translate/.auto-translate-config** file. Then, set **automaticTranslation** to **true** and **translationProvider** to either **google** or **azure**. Please refrain from modifying the **config/applipress/config.json** file.

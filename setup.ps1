@@ -1,5 +1,3 @@
-$env:APPLIPRESS_USER_UID = "1000"
-$env:APPLIPRESS_USER_GID = "1000"
-$env:APPLIPRESS_USER = "1000:1000"
-$env:APPLIPRESS_USERNAME = "applipress"
-$env:APPLIPRESS_GROUPNAME = "applipress_group"
+$env:APPLIPRESS_USER_UID = ""
+$env:APPLIPRESS_USER_GID = ""
+Write-Output "Users set"
