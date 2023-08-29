@@ -14,15 +14,13 @@ We've encapsulated the Applipress Demo inside a Docker container to showcase its
 
 1. Clone the repository.
 
-2. Run the setup command in your terminal:
-   - For Linux and macOS: `./setup.sh`
-   - For Windows: `.\setup.ps1`
+2. Run the **start_ap** command in your terminal:
+   - For Linux and macOS: `./start_ap.sh`
+   - For Windows: `.\start_ap.ps1`
 
-3. In the same terminal session, start the Docker container by running `docker compose up -d`.
+3. Once the container is up and running, you can access the Applipress Demo at http://localhost:18080.
 
-4. Once the container is up and running, you can access the Applipress Demo at http://localhost:18080.
-
-5. To stop the container, run `docker compose down`.
+4. To stop the container, run `stop_ap` command.
 
 ## Additional Configuration
 
