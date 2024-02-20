@@ -1,5 +1,7 @@
 {
   "globalFolder" : "/templates/",
   "currentProjectId" : null,
+  "debug" : false,
+  "defaultProjectsDir" : "/projects/",
   "projects" : []
 }
