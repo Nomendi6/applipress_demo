@@ -14,7 +14,7 @@ We've encapsulated the Applipress Demo inside a Docker container to showcase its
 
 1. Clone the repository.
 
-2. Run the **start_ap** command in your terminal:
+2. Run the **start** command in your terminal:
    - For Linux and macOS: `./start.sh`
    - For Windows: `.\start.ps1`
 
