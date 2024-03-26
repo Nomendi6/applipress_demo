@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   #
   # Please, first run the setup script to initialize the environment variables
@@ -16,6 +15,8 @@ services:
       # - APPLIPRESS_GROUPNAME=${APPLIPRESS_GROUPNAME} # Group name for Applipress
       - APPLIPRESS_USER_UID=${APPLIPRESS_USER_UID}   # User UID for Applipress
       - APPLIPRESS_USER_GID=${APPLIPRESS_USER_GID}   # User GID for Applipress
+      # - GIT_USER_EMAIL="applipress@nomendi6.com"   # Email for Git
+      # - GIT_USER_NAME="Applipress"                 # Name for Git
     ports:
       - 127.0.0.1:18080:8080 # Maps the application's port 8080 to the host's port 18080
     volumes:
